@@ -1,50 +1,27 @@
-# Airfoil-Regression-With-Deployment
-This is a  project to elaborate how Machine Learning Models are deployed in production using Flask API
+## Brain Tumor Classification
 
-Prerequisites
+## Introduction
 
-**Prerequisites**
-You must have Scikit Learn, Pandas (for Machine Leraning Model) and Flask (for API) installed.
+Brain tumors are abnormal growths of cells in the brain that can be benign or malignant. Early and accurate detection of brain tumors is crucial for effective treatment and improved patient outcomes. Machine learning and deep learning techniques have significantly advanced medical imaging, enabling automated and accurate tumor classification.
 
+This repository presents a Brain Tumor Classification project that utilizes deep learning models to classify brain tumors from MRI scans. The objective is to build a robust model that can differentiate between tumor types, aiding radiologists and healthcare professionals in diagnosis.
 
-**Project Structure**
+## Project Overview
 
-This project has four major parts :
+Dataset: Publicly available MRI datasets containing images labeled with different types of brain tumors.
 
+Model Architecture: Convolutional Neural Networks (CNNs) for feature extraction and classification.
 
-app.py - This contains Flask APIs that receive air foil details through GUI or API calls, computes the precited value based on our model and returns it.
+Frameworks Used: TensorFlow/Keras,OpenCV, NumPy, and Pandas.
 
+Evaluation Metrics: Accuracy, Precision, Recall, F1-score, and Confusion Matrix.
 
-templates - This folder contains the HTML template to allow user to enter employee detail and displays the predicted air foil regression.
+Features
 
-**Running the project**
+Preprocessing: Image normalization, augmentation, and noise reduction.
 
-Ensure that you are in the project home directory. Create the machine learning model by running below command -
+Deep Learning Model: Implementation of CNN-based architectures (VGG19).
 
+Visualization: Grad-CAM for explainability of model predictions.
 
-
-This would create a serialized version of our model into a file model.pkl
-
-
-
-1. Run app.py using below command to start Flask API
-
-2. python app.py
-
-3. By default, flask will run on port 5000.
-
-
-
-Navigate to URL http://localhost:5000
-
-You should be able to view the homepage as below :alt text
-
-
-
-Enter valid numerical values in all  input boxes and hit Predict.
-
-
-
-If everything goes well, you should be able to see the predicted vaule on the HTML page! alt text
-
-
+Deployment: Model export and deployment using Flask or FastAPI.
