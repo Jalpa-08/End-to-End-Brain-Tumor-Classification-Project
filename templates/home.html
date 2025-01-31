@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://bitbaroda.com/uploads/system/57f3c6d49921c666e47139e2ead526e3.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LET'S PREDICT THE TUMOR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-image: url("https://www.ucsfhealth.org/-/media/project/ucsf/ucsf-health/medical-tests/hero/mri-of-the-head-2x.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #d9cbcb;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 10px solid black; /* Black border */
+        }
+        h1 {
+            color: black; /* Title color */
+            margin-bottom: 40px;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+            color: white; /* Text color changed to white */
+        }
+        .file-label {
+            display: inline-block;
+            background-color: black; /* Button background color */
+            color: white; /* Text color */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 2px solid black; /* Black border */
+        }
+        .file-label:hover {
+            background-color: #559f9f;
+        }
+        .submit-button {
+            display: block;
+            margin: 0 auto; /* Center the button horizontally */
+            margin-top: 20px;
+            background-color: black; /* Button background color */
+            color: white; /* Text color */
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid black; /* Black border */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LET'S PREDICT THE TUMOR</h1>
+        <div class="inner-container">
+            <form action="/predict" method="POST" enctype="multipart/form-data">
+                <!-- File Upload Input -->
+                <label for="image-upload" class="file-label">Upload your Tumor image</label>
+                <input id="image-upload" type="file" name="file" accept="image/*" required style="display: none;">
+
+                <!-- Submit Button (Centered) -->
+                <button type="submit" class="submit-button">Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

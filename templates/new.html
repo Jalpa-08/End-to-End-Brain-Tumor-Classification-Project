@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url("https://media.istockphoto.com/id/1131144060/photo/magnetic-resonance-scan-of-the-brain-with-skull-mri-head-scan-on-dark-background-blue-color-x.jpg?s=2048x2048&w=is&k=20&c=uifgtA6qYk1D2BXsRVUBF6SK9MlbOdszuSDiXS7pptY=");
+            background-size: 55%; /* Adjust the zoom level as needed */
+            background-position: center;
+        }
+        
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+            color: #fff;
+            padding: 10px 20px; /* Adjusted padding */
+            display: flex;
+            justify-content: space-between; /* Distribute items along the header */
+            align-items: center;
+        }
+        
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px; /* Add margin to separate icons */
+        }
+        
+        /* Adjust the margin to push the icons to the right */
+        header a:first-child {
+            margin-right: auto;
+        }
+
+        section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: bold;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        /* Center the title horizontally and vertically */
+        .title-container {
+            flex-grow: 1; /* Take up remaining space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 22px;
+            background: transparent;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            margin-right: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <a href="/home">Home</a>
+        <a href="/result">Result</a>
+    </div>
+    <!-- Title container to center the title -->
+    <div class="title-container">    
+        <h1>Brain Tumor Classification</h1>
+    </div>
+</header>
+
+
+
+<section>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide">
+                <img src="https://iiif.wellcomecollection.org/image/N0023928/full/full/0/default.jpg" alt="Image 2">
+                <p> Glioma: Gliomas are tumors that arise from glial cells in the brain or spinal cord. They can vary in aggressiveness and are classified based on the type of glial cell they originate from, such as astrocytes, oligodendrocytes, or ependymal cells. Symptoms may include headaches, seizures, cognitive impairment, and changes in personality or behavior. Treatment often involves a combination of surgery, radiation therapy, and chemotherapy, depending on the type and grade of the glioma.
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://media.sciencephoto.com/image/c0472765/800wm/C0472765-Meningioma_brain_tumour,_MRI_scan.jpg" alt="Image 2">
+                <p> Meningioma: Meningiomas are usually benign tumors that develop from the meninges, the protective layers of tissue surrounding the brain and spinal cord. They are typically slow-growing and may not cause symptoms until they reach a significant size or press on nearby structures. Symptoms can include headaches, vision changes, seizures, and weakness in the limbs. Treatment options may include observation, surgery, radiation therapy, or a combination thereof, depending on factors such as size, location, and symptoms.</p>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://healthjade.net/wp-content/uploads/2018/04/pituitary-tumor-MRI-1024x1024.jpg" alt="Image 2">
+                <p> Pituitary Tumor: Pituitary tumors are growths that develop in the pituitary gland, a small gland located at the base of the brain. They can be benign or malignant and may cause hormonal imbalances by either overproducing or underproducing certain hormones. Symptoms can vary widely depending on the type of hormone affected but may include changes in vision, headaches, fatigue, menstrual irregularities, and changes in weight or appetite. Treatment options include medication, surgery, and radiation therapy, often tailored to the specific type and size of the tumor..</p>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://miro.medium.com/max/257/1*BGxLxoHd8MG9m8gesYIprw.jpeg" alt="Image 2">
+                <p> Notumor: "Notumor" is not a recognized medical term, but assuming it refers to a non-tumor condition, it could encompass various non-neoplastic (non-cancerous) conditions affecting the brain or nervous system. These may include vascular malformations, infections, inflammatory conditions, degenerative diseases, or congenital abnormalities. Symptoms and treatment options would depend on the specific condition involved. Proper diagnosis by a healthcare professional is crucial for appropriate management..</p>
+            </div>
+            <!-- Add more slides here -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://bitbaroda.com/uploads/system/57f3c6d49921c666e47139e2ead526e3.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-image: url("https://www.ucsfhealth.org/-/media/project/ucsf/ucsf-health/medical-tests/hero/mri-of-the-head-2x.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #d9cbcb;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 10px solid black; /* Black border */
+        }
+        h1 {
+            color: black; /* Title color */
+            margin-bottom: 40px;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        h2 {
+            color: black; /* Subtitle color */
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            margin: 0 auto; /* Center the image */
+            max-width: 100%; /* Make sure the image is responsive */
+            height: auto;
+            width: 200px; /* Set a smaller width for the image */
+            border-radius: 10px; /* Optional: Add some rounded corners */
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: 2px solid black; /* Black border */
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <h2>Predicted Class: {{ predicted_class }}</h2>
+
+        {% if image %}
+            <h2>Uploaded Image:</h2>
+            <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+        {% else %}
+            <p>No image available.</p>
+        {% endif %}
+
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
